@@ -1,38 +1,50 @@
 {
   "name": "email-validator-ultimate",
-  "version": "1.0.3",
-  "description": "Advanced email validator ultimate library for Node.js. Includes format checks, MX records, SMTP inbox validation, disposable email detection, and quality scoring. email validation email validator",
+  "version": "2.1.0",
+  "description": "Advanced email validation library for Node.js. RFC 5322 format validation, MX records, SMTP inbox check, disposable email detection, typo suggestions, risk analysis, Gravatar detection, DNS blacklist check, batch validation, caching, and CLI tool.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "commonjs",
+  "bin": {
+    "email-validator-ultimate": "./dist/cli.js",
+    "evu": "./dist/cli.js"
+  },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src/",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
-    " email validator ultimate",
-    "email validator",
-    "email",
-    "email validation",
-    "email validator",
-    "validate email",
-    "email checker",
-    "MX record check",
-    "SMTP validation",
-    "disposable email detection",
-    "email-validation",
-    "smtp-check",
-    "email-verification",
+    "email-validator-ultimate",
     "email-validator",
+    "email",
+    "email-validation",
     "validate-email",
+    "email-checker",
+    "mx-record",
+    "smtp-validation",
+    "disposable-email",
+    "email-verification",
+    "smtp-check",
     "node-email-validator",
     "check-inbox",
-    "email-checker",
-    "disposable-email",
-    "mx-record",
-    "smtp"
+    "disposable-email-detection",
+    "batch-validation",
+    "email-typo",
+    "email-suggestion",
+    "email-cache",
+    "email-normalization",
+    "gravatar",
+    "risk-analysis",
+    "dns-blacklist",
+    "email-cli",
+    "rfc5322"
   ],
   "author": {
     "name": "Aminul Islam",
@@ -49,7 +61,8 @@
   },
   "devDependencies": {
     "@types/node": "^22.15.29",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^2.0.0"
   },
   "engines": {
     "node": ">=16.0.0"
@@ -57,5 +70,10 @@
   "bugs": {
     "url": "https://github.com/ai-mehedi/email-validator-ultimate/issues"
   },
-  "homepage": "https://github.com/ai-mehedi/email-validator-ultimate#readme"
+  "homepage": "https://github.com/ai-mehedi/email-validator-ultimate#readme",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
 }

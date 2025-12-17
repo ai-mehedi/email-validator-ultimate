@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(npx tsc)",
+      "Bash(npm install:*)",
+      "Bash(dir:*)",
+      "Bash(node test.js:*)",
+      "Bash(node -e:*)",
+      "Bash(del \"C:\\Users\\Combosoft\\Desktop\\email-validator-ultimate\\test.js\")"
+    ]
+  }
+}
